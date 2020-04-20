@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/temperamenttiKysely/static/css/main.0b3d27f6.chunk.css",
+    "main.js": "/temperamenttiKysely/static/js/main.69880510.chunk.js",
+    "main.js.map": "/temperamenttiKysely/static/js/main.69880510.chunk.js.map",
+    "runtime-main.js": "/temperamenttiKysely/static/js/runtime-main.3f093148.js",
+    "runtime-main.js.map": "/temperamenttiKysely/static/js/runtime-main.3f093148.js.map",
+    "static/js/2.9008e664.chunk.js": "/temperamenttiKysely/static/js/2.9008e664.chunk.js",
+    "static/js/2.9008e664.chunk.js.map": "/temperamenttiKysely/static/js/2.9008e664.chunk.js.map",
+    "index.html": "/temperamenttiKysely/index.html",
+    "precache-manifest.488706e60a69181f4b66b0d39ed1035b.js": "/temperamenttiKysely/precache-manifest.488706e60a69181f4b66b0d39ed1035b.js",
+    "service-worker.js": "/temperamenttiKysely/service-worker.js",
+    "static/css/main.0b3d27f6.chunk.css.map": "/temperamenttiKysely/static/css/main.0b3d27f6.chunk.css.map",
+    "static/js/2.9008e664.chunk.js.LICENSE.txt": "/temperamenttiKysely/static/js/2.9008e664.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f093148.js",
+    "static/js/2.9008e664.chunk.js",
+    "static/css/main.0b3d27f6.chunk.css",
+    "static/js/main.69880510.chunk.js"
+  ]
+}
