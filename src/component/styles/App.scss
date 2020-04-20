@@ -1,0 +1,111 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
+
+$primary-color: #E4952B;
+$font-stack: 'Open Sans Condensed', sans-serif;
+$font-paragraph: Arial;
+
+body {
+    font: 100% $font-stack;
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+        border-bottom: 5px solid $primary-color;
+        text-transform: uppercase;
+    }
+
+    h4 {
+        width: 100%;
+        background-color: $primary-color;
+        color: white;
+        padding: 10px 0 10px 0;
+    }
+
+    p {
+        font: 100% $font-paragraph;
+    }
+
+    .App {
+        text-align: center;
+        margin: 15px;
+    }
+
+    .summaryText {
+        text-align: left;
+    }
+
+    .surveyForm {
+
+        label {
+            transition: background-color 0.5s ease-in-out;
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+
+            span {
+                text-transform: uppercase;
+                display: inline-block;
+                padding: 20px;
+            }
+        }
+
+        label:hover, label:active {
+            transition: background-color 0.5s ease-in-out;
+            background: $primary-color;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            letter-spacing: 1px;
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        .radio-selected {
+            background: $primary-color;
+            color: white;
+            font-weight: bold;
+        }
+
+        input[type="radio"] {
+            visibility: hidden;
+        }
+
+        button {
+            margin-right: 15px;
+        }
+
+        button[disabled] {
+            cursor: not-allowed;
+        }
+
+        input[type="submit"] {
+            margin: 15px;
+        }
+    }
+}
+
+.chart-enter {
+    opacity: 0.01;
+    transform: scale(1.1);
+}
+
+.chart-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms;
+}
+
+.chart-exit {
+    opacity: 0.01;
+    transform: scale(1);
+}
+
+.chart-exit-active {
+    transform: opacity(0.01);
+    transition: all 100ms;
+}

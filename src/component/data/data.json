@@ -1,0 +1,471 @@
+{
+  "questions": [
+    {
+      "question": "OLEN PERUSLUONTEELTANI",
+      "answers": {
+        "spontaani": {
+          "color": "yellow",
+          "letter": "a"
+        },
+        "huolellinen": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "sopeutuva": {
+          "letter": "c",
+          "color": "green"
+        },
+        "peräänantamaton": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "TYÖSSÄNI TAHDON PÄÄASIALLISESTI",
+      "answers": {
+        "olla hyvissä väleissä ihmisten kanssa": {
+          "letter": "a",
+          "color": "green"
+        },
+        "pyrkiä virheettömyyteen": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "toimia innostavassa ilmapiirissä": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "saada tuloksia aikaan": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "HALUAN ETTÄ MINUT NÄHDÄÄN",
+      "answers": {
+        "voimakastahtoisena": {
+          "letter": "a",
+          "color": "red"
+        },
+        "positiivisena": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "asiallisena": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "luotettavana": {
+          "letter": "d",
+          "color": "green"
+        }
+      }
+    },
+
+    {
+      "question": "USEIMMITEN OLEN",
+      "answers": {
+        "ystävällinen": {
+          "letter": "a",
+          "color": "green"
+        },
+        "aikaansaava": {
+          "letter": "b",
+          "color": "red"
+        },
+        "iloinen": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "järjestelmällinen": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "VOISIN OLLA",
+      "answers": {
+        "sovittelijana ristiriidoissa": {
+          "letter": "a",
+          "color": "green"
+        },
+        "tutkijana ja tosiasioiden selvittäjänä": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "johtajana tai projektin vetäjänä": {
+          "letter": "c",
+          "color": "red"
+        },
+        "sisustamassa pirteillä väreillä": {
+          "letter": "d",
+          "color": "yellow"
+        }
+      }
+    },
+
+    {
+      "question": "MUUT IHMISET NÄKEVÄT MINUT",
+      "answers": {
+        "sosiaalisesti taitavana": {
+          "letter": "a",
+          "color": "yellow"
+        },
+        "hyväksyntää hakevana": {
+          "letter": "b",
+          "color": "green"
+        },
+        "arvostusta etsivänä": {
+          "letter": "c",
+          "color": "red"
+        },
+        "omassa olossaan viihtyvänä": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "JOSKUS OLEN",
+      "answers": {
+        "liian huomioon ottava": {
+          "letter": "a",
+          "color": "green"
+        },
+        "liian itsepäinen": {
+          "letter": "b",
+          "color": "red"
+        },
+        "liian innostunut": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "liian vakava": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "KESKUSTELUISSA ENIMMÄKSEEN",
+      "answers": {
+        "sovittelen erilaisia näkemyksiä": {
+          "letter": "a",
+          "color": "green"
+        },
+        "ehdotan uusia näkökulmia": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "tuon esiin tosiasioita": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "yritän viedä asioita eteenpäin": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "HUONOIMMILLANI OLEN",
+      "answers": {
+        "masentunut": {
+          "letter": "a",
+          "color": "blue"
+        },
+        "hillitön": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "saamaton": {
+          "letter": "c",
+          "color": "green"
+        },
+        "ärsytysherkkä": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "MAAILMANKATSOMUKSENI ON",
+      "answers": {
+        "Traditionaalinen (perinteitä kunnioittava)": {
+          "letter": "a",
+          "color": "green"
+        },
+        "Idealistinen (ihanteet ja periaatteet tärkeitä)": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "Konkreettinen (maalaisjärkeä pitää olla)": {
+          "letter": "c",
+          "color": "red"
+        },
+        "Universaalinen (antaa kaikkien kukkien kukkia)": {
+          "letter": "d",
+          "color": "yellow"
+        }
+      }
+    },
+
+    {
+      "question": "TYKKÄÄN JOS MINUSTA SANOTAAN ETTÄ OLEN",
+      "answers": {
+        "hurmaava": {
+          "letter": "a",
+          "color": "yellow"
+        },
+        "suorapuheinen": {
+          "letter": "b",
+          "color": "red"
+        },
+        "huoliteltu": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "uskollinen": {
+          "letter": "d",
+          "color": "green"
+        }
+      }
+    },
+
+    {
+      "question": "PARASTA MINUSSA ON",
+      "answers": {
+        "itsevarmuus": {
+          "letter": "a",
+          "color": "red"
+        },
+        "luovuus": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "huomaavaisuus": {
+          "letter": "c",
+          "color": "green"
+        },
+        "rauhallisuus": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "JOSKUS MINUA HARMITTAA ETTÄ OLEN NIIN",
+      "answers": {
+        "rajaton": {
+          "letter": "a",
+          "color": "yellow"
+        },
+        "kärsimätön": {
+          "letter": "b",
+          "color": "red"
+        },
+        "vaatimaton": {
+          "letter": "c",
+          "color": "green"
+        },
+        "vetäytyvä": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "EHKÄ AJATTELEN LIIKAA",
+      "answers": {
+        "saanko kaikkea sitä mitä minulle kuuluu?": {
+          "letter": "a",
+          "color": "yellow"
+        },
+        "pidetäänkö minusta?": {
+          "letter": "b",
+          "color": "green"
+        },
+        "olenko tehnyt riittävästi?": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "mitä on elämässä oleellisinta?": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "PERUSTAN ELÄMÄNI ASIOIHIN JOTKA OVAT",
+      "answers": {
+        "arkisia ja konkreettisia": {
+          "letter": "a",
+          "color": "green"
+        },
+        "tutkittuja ja faktaa": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "innostavia ja luovia": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "tavoitteellisia ja järkeviä": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "NAUTIN",
+      "answers": {
+        "selkeydestä": {
+          "letter": "a",
+          "color": "blue"
+        },
+        "turvallisuudesta": {
+          "letter": "b",
+          "color": "green"
+        },
+        "huumorista": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "saavutuksista": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "IHMISEN ON HYVÄ OLLA",
+      "answers": {
+        "voimakas": {
+          "letter": "a",
+          "color": "red"
+        },
+        "huumorintajuinen": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "ystävällinen": {
+          "letter": "c",
+          "color": "green"
+        },
+        "periaatteellinen": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "TÄYTYY MYÖNTÄÄ, MUTTA OLEN JOSKUS LIIAN",
+      "answers": {
+        "peräksi antamaton": {
+          "letter": "a",
+          "color": "red"
+        },
+        "saamaton": {
+          "letter": "b",
+          "color": "green"
+        },
+        "huolestunut": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "rauhaton": {
+          "letter": "d",
+          "color": "yellow"
+        }
+      }
+    },
+
+    {
+      "question": "OLEN TYYTYVÄINEN SIITÄ, ETTÄ OLEN",
+      "answers": {
+        "objektiivinen": {
+          "letter": "a",
+          "color": "blue"
+        },
+        "tavallinen": {
+          "letter": "b",
+          "color": "green"
+        },
+        "tunteikas": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "itsenäinen": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "HARMITTAA KUN ANNETAAN YMMÄRTÄÄ ETTÄ OLEN",
+      "answers": {
+        "totinen": {
+          "letter": "a",
+          "color": "blue"
+        },
+        "jyräävä": {
+          "letter": "b",
+          "color": "red"
+        },
+        "puhelias": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "väritön": {
+          "letter": "d",
+          "color": "green"
+        }
+      }
+    },
+
+    {
+      "question": "MINULLE ON ENSIARVOISEN TÄRKEÄTÄ ETTÄ SAAN",
+      "answers": {
+        "olla ihmisten parissa": {
+          "letter": "a",
+          "color": "green"
+        },
+        "paneutua rauhassa asioihin": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "tehdä spontaanisti ja vapaasti": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "nähdä tuloksia syntyvän": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    }
+  ],
+  "types": {
+    "red": "Punainen on energinen, suoraviivainen, reilu ja voimakastahtoinen. Ilmaisutyyli hänellä on jämäkkä, tavoitteellinen, reipas ja äänekäs. Punaisen rooli on itsevarma, veturi, puheenjohtaja ja taistelija. Hän vastaa energiasta. Heikkoudet punaisella ovat hallitsevuus, käskyttävyys, kärsimättömyys. Punaisen on myös vaikea nähdä rajoituksiaan. Treenattavaa: Delegointi, rentoutuminen ja Hiljaa hyvä tulee.",
+    "green": "Vihreä on ystävällinen, kärsivällinen ja leppoisa. Hän ei julista eikä hötkyile. Vihreän ilmaisutyyli on pehmeää, rauhallista ja kohteliasta. Vihreän rooli on sovittelija, lohduttaja. Hän on sosiaalinen ja vastaa periaatteista. Heikkoudet vihreällä ovat päättämättömyys, liika pehmeys, ristiriitojen karttaminen ja riippuvaisuus. Treenattavaa: rohkeus, tunteiden suora ilmaisu, tilan ottaminen.",
+    "blue": "Sininen on suunnitelmallinen, perusteellinen, keskittynyt ja hänellä on laajat näkemykset. Hänen ilmaisutyylinsä on hillittyä, asiallista, harkitsevaa ja tarkkaan määriteltyä. Sinisen rooli on asiantuntija, tarkkailija, tutkija, keräilijä ja faktoista vastaava. Sinisen heikkoudet ovat tosikkomaisuus, perfektionismi, vetäytyvyys ja helposti ahdistuminen. Treenattavaa: huumori, vaihtoehdot, teoria ja käytäntö kaksi eri asiaa.",
+    "yellow": "Keltainen on avoin, mielikuvituksekas, innostunut, luova ja puhelias. Hänen ilmaisutyylinsä on vikkelää, innostunutta ja huumorintajuista. Keltainen käyttää paljon eleitä ja ilmeitä. Keltaisen rooli on esiintyjä, seikkailija, taiteilija, ideoija. Keltainen vastaa tunnelmasta. Heikkoudet ovat epärealistisuus, holtittomuus, täynnä itseään ja huono keskittyminen. Treenattavaa: jalat maahan, asia kerrallaan ja ein -sanomisentaito."
+  }
+}
