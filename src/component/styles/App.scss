@@ -2,16 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 
 $primary-color: #E4952B;
+$bg-color: #fff6d4;
 $font-stack: 'Open Sans Condensed', sans-serif;
 $font-paragraph: Arial;
 
+html, body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 body {
+    margin: 0 auto !important;
     font: 100% $font-stack;
 
     h1 {
         font-size: 1.5em;
         font-weight: bold;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         padding-bottom: 10px;
         border-bottom: 5px solid $primary-color;
         text-transform: uppercase;
@@ -35,8 +43,10 @@ body {
     }
 
     .App {
+        align-self: center;
         text-align: center;
         margin: 15px;
+        max-width: 800px;
     }
 
     .summaryText {
@@ -46,8 +56,13 @@ body {
             font-weight: bold;
             text-transform: capitalize;
             display: inline-block;
-            margin-right:5px;
+            margin-right: 5px;
         }
+    }
+
+    .infoText {
+        background-color: $bg-color;
+        padding: 20px 20px;
     }
 
     .surveyForm {

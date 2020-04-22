@@ -43,11 +43,9 @@ class App extends Component {
     resetSurvey = () => {
         this.setState({
             answers: [],
+            analysis: [],
             activeQuestion: 0,
             chartData: [{ y: 5 }, { y: 5 }, { y: 5 }, { y: 5 }],
-            finalChartData: [],
-            summaryColor: "",
-            summaryText: [],
             showSummary: false
         })
     }
@@ -56,8 +54,7 @@ class App extends Component {
             return (
                 <div className="summaryText">
 
-
-                    <h2>Olet väriltäsi: </h2>
+                    <h2><FormattedMessage id="summary.headline" /></h2>
 
                     {Object.keys(this.state.analysis).map(analysis => (
                         <div className="div-analysis">
@@ -85,7 +82,7 @@ class App extends Component {
                             this.resetSurvey();
                         }}
                         type="button"
-                        className="btn btn-danger btn-lg"> Aloita alusta
+                        className="btn btn-danger btn-lg"><FormattedMessage id="btn.reset" />
                     </button>
                 </div>
             )
@@ -223,7 +220,6 @@ class App extends Component {
                 )
             }
         })
-
         return newdata;
     }
 
@@ -236,19 +232,25 @@ class App extends Component {
                     }}
                     type = "button"
                     disabled = { this.state.activeQuestion < 1 }
-                    className= "btn btn-warning btn-lg" > Edellinen
+                    className="btn btn-warning btn-lg" >
+                        <FormattedMessage id="btn.previous" />
                 </button>
                 <button
                     onClick={() => {
                         this.handleNavigate(false);
                     }}
                     type="button"
-                    disabled={this.state.activeQuestion >= data.questions.length - 1}
-                    className="btn btn-success btn-lg"> Seuraava
+                    disabled={(this.state.activeQuestion >= data.questions.length - 1) || (this.state.activeQuestion >= this.state.answers.length )}
+                    className="btn btn-success btn-lg">
+                        <FormattedMessage id="btn.next" />
                 </button>
                 <br />
                 {this.state.answers.length === data.questions.length && (
-                    <input className="btn btn-primary btn-lg" type="submit" value="Näytä tulokseni" /> ) 
+                    <FormattedMessage id="btn.submit" >
+                        {val =>
+                            <input type="submit" value={val} class="btn btn-primary btn-lg" />
+                        }
+                    </FormattedMessage>) 
                 }
             </div>
         )
@@ -267,7 +269,7 @@ class App extends Component {
                         <div>
                             <div className="row">
                                 <div className="col">
-                                    <p>
+                                    <p className="infoText">
                                         <FormattedMessage
                                             id="homepage.info"
                                             values={{
