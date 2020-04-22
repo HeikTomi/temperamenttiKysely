@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/temperamenttiKysely/precache-manifest.e9357094fa573b801a8928339571a62e.js"
+  "/temperamenttiKysely/precache-manifest.3b0b3980a22ef18f50bb7a40fb6eb2dc.js"
 );
 
 self.addEventListener('message', (event) => {
