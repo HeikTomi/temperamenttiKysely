@@ -123,13 +123,12 @@ class App extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        var numRed = 5;
-        var numBlue = 5;
-        var numGreen = 5;
-        var numYellow = 5;
+        var numRed = 0;
+        var numBlue = 0;
+        var numGreen = 0;
+        var numYellow = 0;
 
         // Calculate answers based on colors
-        /*
         this.state.answers.map((color) => {
 
             switch (color) {
@@ -145,7 +144,7 @@ class App extends Component {
             }
 
             return false;
-        }); */
+        });
 
         // TODO: Better logic for checking all max value types ?!
         var analysis = [];
