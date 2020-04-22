@@ -377,7 +377,7 @@
     {
       "question": "TÄYTYY MYÖNTÄÄ, MUTTA OLEN JOSKUS LIIAN",
       "answers": {
-        "peräksi antamaton": {
+        "periksiantamaton": {
           "letter": "a",
           "color": "red"
         },
@@ -463,9 +463,33 @@
     }
   ],
   "types": {
-    "red": "Punainen on energinen, suoraviivainen, reilu ja voimakastahtoinen. Ilmaisutyyli hänellä on jämäkkä, tavoitteellinen, reipas ja äänekäs. Punaisen rooli on itsevarma, veturi, puheenjohtaja ja taistelija. Hän vastaa energiasta. Heikkoudet punaisella ovat hallitsevuus, käskyttävyys, kärsimättömyys. Punaisen on myös vaikea nähdä rajoituksiaan. Treenattavaa: Delegointi, rentoutuminen ja Hiljaa hyvä tulee.",
-    "green": "Vihreä on ystävällinen, kärsivällinen ja leppoisa. Hän ei julista eikä hötkyile. Vihreän ilmaisutyyli on pehmeää, rauhallista ja kohteliasta. Vihreän rooli on sovittelija, lohduttaja. Hän on sosiaalinen ja vastaa periaatteista. Heikkoudet vihreällä ovat päättämättömyys, liika pehmeys, ristiriitojen karttaminen ja riippuvaisuus. Treenattavaa: rohkeus, tunteiden suora ilmaisu, tilan ottaminen.",
-    "blue": "Sininen on suunnitelmallinen, perusteellinen, keskittynyt ja hänellä on laajat näkemykset. Hänen ilmaisutyylinsä on hillittyä, asiallista, harkitsevaa ja tarkkaan määriteltyä. Sinisen rooli on asiantuntija, tarkkailija, tutkija, keräilijä ja faktoista vastaava. Sinisen heikkoudet ovat tosikkomaisuus, perfektionismi, vetäytyvyys ja helposti ahdistuminen. Treenattavaa: huumori, vaihtoehdot, teoria ja käytäntö kaksi eri asiaa.",
-    "yellow": "Keltainen on avoin, mielikuvituksekas, innostunut, luova ja puhelias. Hänen ilmaisutyylinsä on vikkelää, innostunutta ja huumorintajuista. Keltainen käyttää paljon eleitä ja ilmeitä. Keltaisen rooli on esiintyjä, seikkailija, taiteilija, ideoija. Keltainen vastaa tunnelmasta. Heikkoudet ovat epärealistisuus, holtittomuus, täynnä itseään ja huono keskittyminen. Treenattavaa: jalat maahan, asia kerrallaan ja ein -sanomisentaito."
+      "red": {
+        "headline": "Punainen",
+        "pros": "Punainen on energinen, suoraviivainen, reilu ja voimakastahtoinen. Ilmaisutyyli hänellä on jämäkkä, tavoitteellinen, reipas ja äänekäs. Punaisen rooli on itsevarma, veturi, puheenjohtaja ja taistelija. Hän vastaa energiasta.",
+        "cons": "hallitsevuus, käskyttävyys,kärsimättömyys. Punaisen on myös vaikea nähdä rajoituksiaan.",
+        "tip": "delegointi, rentoutuminen ja Hiljaa hyvä tulee.",
+        "color":  "red"
+      },
+    "green": {
+      "headline": "Vihreä",
+      "pros": "Vihreä on ystävällinen, kärsivällinen ja leppoisa. Hän ei julista eikä hötkyile. Vihreän ilmaisutyyli on pehmeää, rauhallista ja kohteliasta. Vihreän rooli on sovittelija, lohduttaja. Hän on sosiaalinen ja vastaa periaatteista.",
+      "cons": "päättämättömyys, liika pehmeys, ristiriitojen karttaminen ja riippuvaisuus.",
+      "tip": "rohkeus, tunteiden suora ilmaisu, tilan ottaminen.",
+      "color": "green"
+    },
+    "blue": {
+      "headline": "Sininen",
+      "pros": "Sininen on suunnitelmallinen, perusteellinen, keskittynyt ja hänellä on laajat näkemykset. Hänen ilmaisutyylinsä on hillittyä, asiallista, harkitsevaa ja tarkkaan määriteltyä. Sinisen rooli on asiantuntija, tarkkailija, tutkija, keräilijä ja faktoista vastaava.",
+      "cons": "tosikkomaisuus, perfektionismi, vetäytyvyys ja helposti ahdistuminen.",
+      "tip": "huumori, vaihtoehdot, teoria ja käytäntö kaksi eri asiaa.",
+      "color": "blue"
+    },
+    "yellow": {
+      "headline": "Keltainen",
+      "pros": "Keltainen on avoin, mielikuvituksekas, innostunut, luova ja puhelias. Hänen ilmaisutyylinsä on vikkelää, innostunutta ja huumorintajuista. Keltainen käyttää paljon eleitä ja ilmeitä. Keltaisen rooli on esiintyjä, seikkailija, taiteilija, ideoija. Keltainen vastaa tunnelmasta.",
+      "cons": "epärealistisuus, holtittomuus, täynnä itseään ja huono keskittyminen.",
+      "tip": "jalat maahan, asia kerrallaan ja ein -sanomisentaito.",
+      "color": "#ffc107"
+    }
   }
 }

@@ -24,6 +24,12 @@ body {
         padding: 10px 0 10px 0;
     }
 
+    h5 {
+        width: 100%;
+        color: white;
+        padding: 10px 0 10px 10px;
+    }
+
     p {
         font: 100% $font-paragraph;
     }
@@ -35,6 +41,13 @@ body {
 
     .summaryText {
         text-align: left;
+
+        span {
+            font-weight: bold;
+            text-transform: capitalize;
+            display: inline-block;
+            margin-right:5px;
+        }
     }
 
     .surveyForm {

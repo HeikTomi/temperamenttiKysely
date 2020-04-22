@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { IntlProvider } from "react-intl";
+import messages from './messages';
+
+import '@formatjs/intl-relativetimeformat/polyfill';
+import '@formatjs/intl-relativetimeformat/dist/locale-data/fi';
+
 import './index.scss';
 import App from './component/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
+   <React.StrictMode >
+        <IntlProvider locale='fi' messages={messages["fi"]}>
+            <App />
+        </IntlProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

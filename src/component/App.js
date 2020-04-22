@@ -2,8 +2,12 @@
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { VictoryPie, VictoryLabel } from 'victory';
 import update from 'immutability-helper';
-import './styles/App.scss';
+
+import { FormattedMessage } from 'react-intl';
+
 import data from './data/data.json'
+
+import './styles/App.scss';
 
 class App extends Component {
 
@@ -12,10 +16,9 @@ class App extends Component {
 
         this.state = {
             answers: [],
+            analysis: [],
             activeQuestion: 0,
             chartData: [{ y: 5 }, { y: 5 }, { y: 5 }, { y: 5 }],
-            summaryColor: "",
-            summaryText: "",
             showSummary: false
         };
 
@@ -49,34 +52,46 @@ class App extends Component {
         })
     }
 
-
-
     summaryText = () => {
             return (
                 <div className="summaryText">
 
-                    <h2>Olet väriltäsi {this.state.summaryColor}</h2>
 
-                    {this.state.summaryText.map(analysis => (
-                        <p>
-                            {analysis}
-                        </p>
+                    <h2>Olet väriltäsi: </h2>
+
+                    {Object.keys(this.state.analysis).map(analysis => (
+                        <div className="div-analysis">
+                            <p>
+                                <h5 style={{ backgroundColor: this.state.analysis[analysis].color }} >
+                                    <FormattedMessage id="headline[{analysis}]" defaultMessage={this.state.analysis[analysis].headline} />
+                                </h5>
+                                <span><FormattedMessage id="character" /></span>
+                                <FormattedMessage id="pros[{analysis}]" defaultMessage={this.state.analysis[analysis].pros} />
+                            </p>
+                            <p>
+                                <span><FormattedMessage id="weaknesses"/></span>
+                                <FormattedMessage id="cons[{analysis}]" defaultMessage={this.state.analysis[analysis].cons} />
+                            </p>
+                            <p>
+                                <span><FormattedMessage id="tip" /></span>
+                                <FormattedMessage id="cons[{analysis}]" defaultMessage={this.state.analysis[analysis].tip} />
+                            </p>
+                            <hr />
+                        </div>
                     ))}
 
                     <button
                         onClick={() => {
                             this.resetSurvey();
                         }}
-                        id="resetBtn"
                         type="button"
-                        className="btn btn-danger"> Aloita alusta
-                </button>
+                        className="btn btn-danger btn-lg"> Aloita alusta
+                    </button>
                 </div>
             )
-
     }
-    summaryChart = () => {
 
+    summaryChart = () => {
         return (
             <svg viewBox="0 0 400 400">
                 <VictoryPie
@@ -92,8 +107,7 @@ class App extends Component {
                     },
                     labels: {
                         size: 20,
-                        fill: "#4d4d4d",
-                        backgroundColor: "#000"
+                        fill: "#4d4d4d"
                     }
                 }}
                 />
@@ -101,7 +115,6 @@ class App extends Component {
                     textAnchor="middle"
                     style={{ fontSize: 100, fill: "#E4952B" }}
                     x={200} y={200}
-                    text={'\u2606'}
                 />
             </svg>
         )
@@ -110,12 +123,13 @@ class App extends Component {
     onSubmit = (e) => {
         e.preventDefault();
 
-        var numRed = 0;
-        var numBlue = 0;
-        var numGreen = 0;
-        var numYellow = 0;
+        var numRed = 5;
+        var numBlue = 5;
+        var numGreen = 5;
+        var numYellow = 5;
 
         // Calculate answers based on colors
+        /*
         this.state.answers.map((color) => {
 
             switch (color) {
@@ -131,41 +145,28 @@ class App extends Component {
             }
 
             return false;
-        });
+        }); */
 
-        var color = "";
-        var colorText = [];
+        // TODO: Better logic for checking all max value types ?!
+        var analysis = [];
         var summaries = [numRed, numBlue, numGreen, numYellow]
         var max = Math.max(...summaries);
-
         if (summaries[0] === max) {
-            colorText.push(data.types.red);
-            color = "Punainen";
+            analysis.push(data.types.red);
         }
 
         if (summaries[1] === max) {
-            if (colorText.length > 0 && color.length > 0 ) {
-                color = color + ", ";
-            }
-            colorText.push(data.types.blue);
-            color = color + "Sininen";
+            analysis.push(data.types.blue);
         }
 
         if (summaries[2] === max) {
-            if (colorText.length > 0 && color.length > 0) {
-                color = color + ", ";
-            }
-            colorText.push(data.types.green);
-            color = color + "Vihreä";
+            analysis.push(data.types.green);;
         }
 
         if (summaries[3] === max) {
-            if (colorText.length > 0 && color.length > 0) {
-                color = color + ", ";
-            }
-            colorText.push(data.types.yellow);
-            color = color + "Keltainen";
+            analysis.push(data.types.yellow);
         }
+        // -->
 
         var chartData = [
             { y: numRed, label: (numRed / data.questions.length * 100).toFixed(2) + "%" },
@@ -176,8 +177,7 @@ class App extends Component {
 
         this.setState(() => ({
             showSummary: true,
-            summaryColor: color,
-            summaryText: colorText,
+            analysis: analysis,
         }), () => {
             setTimeout(() => {
                 this.setState(() => ({
@@ -237,7 +237,7 @@ class App extends Component {
                     }}
                     type = "button"
                     disabled = { this.state.activeQuestion < 1 }
-                    className = "btn btn-warning" > Edellinen
+                    className= "btn btn-warning btn-lg" > Edellinen
                 </button>
                 <button
                     onClick={() => {
@@ -245,11 +245,11 @@ class App extends Component {
                     }}
                     type="button"
                     disabled={this.state.activeQuestion >= data.questions.length - 1}
-                    className="btn btn-success"> Seuraava
+                    className="btn btn-success btn-lg"> Seuraava
                 </button>
                 <br />
                 {this.state.answers.length === data.questions.length && (
-                    <input className="btn btn-primary" type="submit" value="Näytä tulokseni" /> ) 
+                    <input className="btn btn-primary btn-lg" type="submit" value="Näytä tulokseni" /> ) 
                 }
             </div>
         )
@@ -261,33 +261,31 @@ class App extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col">
-                            <h1>21 kysymystä persoonallisuudestasi</h1>
+                            <h1><FormattedMessage id="homepage.headline" /></h1>
                         </div>
                     </div>
-                        {this.state.showSummary === false && (
-                            <div>
-                                <div className="row">
-                                    <div className="col">
-                                        <p>
-                                            Allaoleva testi on kysely, jonka avulla saat alustavan käsityksen omasta temperamentistasi.
-                                            Valitse se vaihtoehto, joka kuvastaa itseäsi parhaiten juuri nyt.
-			                            </p>
-                                        <p>
-                                            Persoonallisuutesi kokonaisuus selviää tutkimalla, keskustelemalla, pohtimalla ja ennen kaikkea elämällä
-                                            – testi tai kysely toimii aina vain itsetuntemuksen ja ihmistuntemuksen apuvälineenä.
-                                            Muista: temperamentti on vain yksi ulottuvuus ihmisen laajassa ja moniulotteisesta persoonallisuudesta.
-			                            </p>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col">
-                                        <form onSubmit={this.onSubmit} className="surveyForm">
-                                            {this.getQuestions()}
-                                            {this.surveyNavigation()}
-                                        </form>
-                                    </div>
+                    {this.state.showSummary === false && (
+                        <div>
+                            <div className="row">
+                                <div className="col">
+                                    <p>
+                                        <FormattedMessage
+                                            id="homepage.info"
+                                            values={{
+                                                newP: <span><br /><br /></span>,
+                                            }} />
+                                    </p>
                                 </div>
                             </div>
+                            <div className="row">
+                                <div className="col">
+                                    <form onSubmit={this.onSubmit} className="surveyForm">
+                                        {this.getQuestions()}
+                                        {this.surveyNavigation()}
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     )}
                     <TransitionGroup component={null}>
                     {this.state.showSummary === true && (
@@ -296,7 +294,7 @@ class App extends Component {
                                     <div className="col-lg-6">
                                     {this.summaryText()}
                                 </div>
-                                    <div className="col-lg-6 chart">
+                                    <div className="col-lg-6">
                                     {this.summaryChart()}
                                 </div>
                             </div>
