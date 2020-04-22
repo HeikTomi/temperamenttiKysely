@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ae47d8aee49277c19d48b89e7516b396",
+    "revision": "f7d3608dee13da028dd7267d64018f5f",
     "url": "/temperamenttiKysely/index.html"
   },
   {
-    "revision": "65dd732335fd0ca89b46",
+    "revision": "109fb2d5ed3f2dd31c7a",
     "url": "/temperamenttiKysely/static/css/main.e5de6b1f.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/temperamenttiKysely/static/js/2.f6a56a5e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65dd732335fd0ca89b46",
-    "url": "/temperamenttiKysely/static/js/main.8fa73f0c.chunk.js"
+    "revision": "109fb2d5ed3f2dd31c7a",
+    "url": "/temperamenttiKysely/static/js/main.975b58f5.chunk.js"
   },
   {
     "revision": "a2bba5d9c5c8dc2d161c",
