@@ -4,7 +4,8 @@ import { IntlProvider } from "react-intl";
 import messages from './messages';
 
 import '@formatjs/intl-relativetimeformat/polyfill';
-import '@formatjs/intl-relativetimeformat/dist/locale-data/fi';
+import '@formatjs/intl-relativetimeformat/locale-data/fi';
+
 
 import './index.scss';
 import App from './component/App';
