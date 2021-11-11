@@ -1,4 +1,5 @@
-﻿import React, { Component } from 'react';
+
+import React, { Component } from 'react';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { VictoryPie, VictoryLabel } from 'victory';
 import update from 'immutability-helper';
@@ -215,10 +216,10 @@ class App extends Component {
                                 </label>
                             </li>
                         ))}
-                    </ul> 
+                    </ul>
                 </div>
                 )
-            }
+            } return ""
         })
         return newdata;
     }
@@ -250,12 +251,12 @@ class App extends Component {
                         {val =>
                             <input type="submit" value={val} class="btn btn-primary btn-lg" />
                         }
-                    </FormattedMessage>) 
+                    </FormattedMessage>)
                 }
             </div>
         )
     }
- 
+
     render() {
         return (
             <div className="App">
@@ -299,7 +300,7 @@ class App extends Component {
                                     {this.summaryChart()}
                                 </div>
                             </div>
-                        </CSSTransition> 
+                        </CSSTransition>
                     )}
                     </TransitionGroup>
                 </div>
