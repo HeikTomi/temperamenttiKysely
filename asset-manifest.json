@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/temperamenttiKysely/static/css/main.5e5b2665.chunk.css",
-    "main.js": "/temperamenttiKysely/static/js/main.d0b314aa.chunk.js",
-    "main.js.map": "/temperamenttiKysely/static/js/main.d0b314aa.chunk.js.map",
+    "main.js": "/temperamenttiKysely/static/js/main.01cf3589.chunk.js",
+    "main.js.map": "/temperamenttiKysely/static/js/main.01cf3589.chunk.js.map",
     "runtime-main.js": "/temperamenttiKysely/static/js/runtime-main.d8aa2863.js",
     "runtime-main.js.map": "/temperamenttiKysely/static/js/runtime-main.d8aa2863.js.map",
-    "static/js/2.81c0a421.chunk.js": "/temperamenttiKysely/static/js/2.81c0a421.chunk.js",
-    "static/js/2.81c0a421.chunk.js.map": "/temperamenttiKysely/static/js/2.81c0a421.chunk.js.map",
+    "static/js/2.7c006daa.chunk.js": "/temperamenttiKysely/static/js/2.7c006daa.chunk.js",
+    "static/js/2.7c006daa.chunk.js.map": "/temperamenttiKysely/static/js/2.7c006daa.chunk.js.map",
     "index.html": "/temperamenttiKysely/index.html",
     "static/css/main.5e5b2665.chunk.css.map": "/temperamenttiKysely/static/css/main.5e5b2665.chunk.css.map",
-    "static/js/2.81c0a421.chunk.js.LICENSE.txt": "/temperamenttiKysely/static/js/2.81c0a421.chunk.js.LICENSE.txt"
+    "static/js/2.7c006daa.chunk.js.LICENSE.txt": "/temperamenttiKysely/static/js/2.7c006daa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d8aa2863.js",
-    "static/js/2.81c0a421.chunk.js",
+    "static/js/2.7c006daa.chunk.js",
     "static/css/main.5e5b2665.chunk.css",
-    "static/js/main.d0b314aa.chunk.js"
+    "static/js/main.01cf3589.chunk.js"
   ]
 }
