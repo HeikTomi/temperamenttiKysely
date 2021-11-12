@@ -1,0 +1,495 @@
+{
+  "questions": [
+    {
+      "question": "MY BACIS PERSONALITY IS",
+      "answers": {
+        "Spontaneous": {
+          "color": "yellow",
+          "letter": "a"
+        },
+        "Careful": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "adaptable": {
+          "letter": "c",
+          "color": "green"
+        },
+        "unyielding": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "IN MY WORK I WILL MAINLY",
+      "answers": {
+        "be on good terms with people": {
+          "letter": "a",
+          "color": "green"
+        },
+        "strive for flawlessness": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "act in an inspiring atmosphere": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "get results": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "I WANT TO BE SEEN AS",
+      "answers": {
+        "strong willed": {
+          "letter": "a",
+          "color": "red"
+        },
+        "positive": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "appropriate": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "reliable": {
+          "letter": "d",
+          "color": "green"
+        }
+      }
+    },
+
+    {
+      "question": "I AM MOSTLY",
+      "answers": {
+        "friendly": {
+          "letter": "a",
+          "color": "green"
+        },
+        "causing": {
+          "letter": "b",
+          "color": "red"
+        },
+        "cheerful": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "systematic": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "I COULD BE",
+      "answers": {
+        "as a mediator in conflicts": {
+          "letter": "a",
+          "color": "green"
+        },
+        "as a researcher and fact-finding officer": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "as a leader or project manager": {
+          "letter": "c",
+          "color": "red"
+        },
+        "decorating with vibrant colors": {
+          "letter": "d",
+          "color": "yellow"
+        }
+      }
+    },
+
+    {
+      "question": "OTHER PEOPLE SEE ME AS",
+      "answers": {
+        "socially savvy": {
+          "letter": "a",
+          "color": "yellow"
+        },
+        "applying for approval": {
+          "letter": "b",
+          "color": "green"
+        },
+        "seeking appreciation": {
+          "letter": "c",
+          "color": "red"
+        },
+        "comfortable in their own right": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "SOMETIMES I AM",
+      "answers": {
+        "too considerate": {
+          "letter": "a",
+          "color": "green"
+        },
+        "too stubborn": {
+          "letter": "b",
+          "color": "red"
+        },
+        "too excited": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "too serious": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "IN MOST OF THE DISCUSSIONS",
+      "answers": {
+        "I reconcile different views": {
+          "letter": "a",
+          "color": "green"
+        },
+        "I suggest new perspectives": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "I bring out the facts": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "I try to take things forward": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "AT MY WORST I AM",
+      "answers": {
+        "depressed": {
+          "letter": "a",
+          "color": "blue"
+        },
+        "unbridled": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "supine": {
+          "letter": "c",
+          "color": "green"
+        },
+        "irritant": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "MY WORLD VIEW IS",
+      "answers": {
+        "Traditional (respectful of traditions)": {
+          "letter": "a",
+          "color": "green"
+        },
+        "Idealistic (ideals and principles important)": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "Concrete (common sense must be present)": {
+          "letter": "c",
+          "color": "red"
+        },
+        "Universal (let a thousand flowes bloom)": {
+          "letter": "d",
+          "color": "yellow"
+        }
+      }
+    },
+
+    {
+      "question": "I LIKE IF I AM SAYED THAT I AM",
+      "answers": {
+        "charming": {
+          "letter": "a",
+          "color": "yellow"
+        },
+        "outspoken": {
+          "letter": "b",
+          "color": "red"
+        },
+        "groomed": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "loyal": {
+          "letter": "d",
+          "color": "green"
+        }
+      }
+    },
+
+    {
+      "question": "THE BEST IN ME IS",
+      "answers": {
+        "confidence": {
+          "letter": "a",
+          "color": "red"
+        },
+        "creativity": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "attentiveness": {
+          "letter": "c",
+          "color": "green"
+        },
+        "peace": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "SOMETIMES I AM IRRITATED THAT I AM SO",
+      "answers": {
+        "boundless": {
+          "letter": "a",
+          "color": "yellow"
+        },
+        "impatient": {
+          "letter": "b",
+          "color": "red"
+        },
+        "modest": {
+          "letter": "c",
+          "color": "green"
+        },
+        "retiring": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "MAYBE I THINK TOO",
+      "answers": {
+        "do i get all that belongs to me?": {
+          "letter": "a",
+          "color": "yellow"
+        },
+        "whether I am liked?": {
+          "letter": "b",
+          "color": "green"
+        },
+        "have I done enough?": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "what is most important in life?": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "I BASE MY LIFE ON THINGS THAT ARE",
+      "answers": {
+        "mundane and concrete": {
+          "letter": "a",
+          "color": "green"
+        },
+        "researched and factual": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "inspiring and creative": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "targeted and sensible": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "I ENJOY",
+      "answers": {
+        "clarity": {
+          "letter": "a",
+          "color": "blue"
+        },
+        "security": {
+          "letter": "b",
+          "color": "green"
+        },
+        "humor": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "achievements": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "A PERSON IS GOOD TO BE",
+      "answers": {
+        "strong": {
+          "letter": "a",
+          "color": "red"
+        },
+        "humorous": {
+          "letter": "b",
+          "color": "yellow"
+        },
+        "friendly": {
+          "letter": "c",
+          "color": "green"
+        },
+        "principled": {
+          "letter": "d",
+          "color": "blue"
+        }
+      }
+    },
+
+    {
+      "question": "I HAVE TO ACKNOWLEDGE BUT I AM SOMEWHAT TOO",
+      "answers": {
+        "unyielding": {
+          "letter": "a",
+          "color": "red"
+        },
+        "supine": {
+          "letter": "b",
+          "color": "green"
+        },
+        "concerned": {
+          "letter": "c",
+          "color": "blue"
+        },
+        "restless": {
+          "letter": "d",
+          "color": "yellow"
+        }
+      }
+    },
+
+    {
+      "question": "I AM SATISFIED THAT I AM",
+      "answers": {
+        "objective": {
+          "letter": "a",
+          "color": "blue"
+        },
+        "ordinary": {
+          "letter": "b",
+          "color": "green"
+        },
+        "impassioned": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "independent": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    },
+
+    {
+      "question": "IT IS DAMAGING WHEN LET'S UNDERSTAND THAT I AM",
+      "answers": {
+        "serious": {
+          "letter": "a",
+          "color": "blue"
+        },
+        "overruning": {
+          "letter": "b",
+          "color": "red"
+        },
+        "talkative": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "colorless": {
+          "letter": "d",
+          "color": "green"
+        }
+      }
+    },
+
+    {
+      "question": "IT IS PRIORITY FOR ME TO",
+      "answers": {
+        "be with people": {
+          "letter": "a",
+          "color": "green"
+        },
+        "focus on things in peace": {
+          "letter": "b",
+          "color": "blue"
+        },
+        "do things spontaneously and freely": {
+          "letter": "c",
+          "color": "yellow"
+        },
+        "see the results generated": {
+          "letter": "d",
+          "color": "red"
+        }
+      }
+    }
+  ],
+  "types": {
+      "red": {
+        "headline": "Red",
+        "pros": "Red is energetic, straightforward, fair and strong-willed. His style of expression is firm, purposeful, brisk and loud. The role of the red is confident, locomotive, chairman and fighter. He is responsible for energy.",
+        "cons": "dominance, commandment, impatience. Red also has a hard time seeing its limitations.",
+        "tip": "delegation, relaxation and more haste, less speed.",
+        "color":  "red"
+      },
+    "green": {
+      "headline": "Green",
+      "pros": "Green is friendly, patient and easy going. He does not declare or gossip. The expressive style of green is soft, calm and polite. The role of the green is to mediate, to comfort. He is social and responsible for principles.",
+      "cons": "indecision, too much softness, avoidance of contradictions, and dependence.",
+      "tip": "courage, direct expression of emotions, taking space.",
+      "color": "green"
+    },
+    "blue": {
+      "headline": "Blue",
+      "pros": "Blue is planned, thorough, focused, and has broad insights. His style of expression is restrained, matter-of-fact, thoughtful, and well-defined. The role of Blue is an expert, an observer, a researcher, a collector, and a person in charge of the facts.",
+      "cons": "reality, perfectionism, withdrawal, and ease of anxiety.",
+      "tip": "humor, options, theory and practice are two different things.",
+      "color": "blue"
+    },
+    "yellow": {
+      "headline": "Yellow",
+      "pros": "Yellow is open, imaginative, enthusiastic, creative and talkative. Her style of expression is nimble, enthusiastic and has a sense of humor. Yellow uses a lot of gestures and expressions. The role of the yellow is the performer, the adventurer, the artist, the inventor. Yellow is responsible for the mood.",
+      "cons": "unreality, recklessness, self-inflicted and poor concentration.",
+      "tip": "feet to the ground, one thing at a time and learning to say NO.",
+      "color": "#ffc107"
+    }
+  }
+}

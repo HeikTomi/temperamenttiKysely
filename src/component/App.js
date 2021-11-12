@@ -4,27 +4,44 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { VictoryPie, VictoryLabel } from 'victory';
 import update from 'immutability-helper';
 
-import { FormattedMessage } from 'react-intl';
+import { IntlProvider } from "react-intl";
+import messages from '../messages';
 
-import data from './data/data.json'
+import { FormattedMessage } from 'react-intl';
 
 import './styles/App.scss';
 
+import data_fi from './data/data_fi.json';
+import data_en from './data/data_en.json';
+
 class App extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
 
         this.state = {
             answers: [],
             analysis: [],
             activeQuestion: 0,
             chartData: [{ y: 5 }, { y: 5 }, { y: 5 }, { y: 5 }],
-            showSummary: false
+            showSummary: false,
+            lang: this.props.lang,
+            data : data_fi
         };
 
         this.onRadioChange = this.onRadioChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+    }
+
+    changeLang = (language) => {
+      this.setState({ lang : language });
+
+      if(language === 'fi')
+          this.setState({ data : data_fi });
+
+      if(language === 'en')
+          this.setState({ data :  data_en });
+
     }
 
     onRadioChange = (e) => {
@@ -58,21 +75,23 @@ class App extends Component {
                     <h2><FormattedMessage id="summary.headline" /></h2>
 
                     {Object.keys(this.state.analysis).map(analysis => (
-                        <div className="div-analysis">
-                            <p>
+                        <div className="div-analysis" key="{this.state.analysis[analysis].headline}">
+                            <div>
                                 <h5 style={{ backgroundColor: this.state.analysis[analysis].color }} >
                                     <FormattedMessage id="headline[{analysis}]" defaultMessage={this.state.analysis[analysis].headline} />
                                 </h5>
+                                <p>
                                 <span><FormattedMessage id="character" /></span>
                                 <FormattedMessage id="pros[{analysis}]" defaultMessage={this.state.analysis[analysis].pros} />
-                            </p>
+                                </p>
+                            </div>
                             <p>
                                 <span><FormattedMessage id="weaknesses"/></span>
                                 <FormattedMessage id="cons[{analysis}]" defaultMessage={this.state.analysis[analysis].cons} />
                             </p>
                             <p>
                                 <span><FormattedMessage id="tip" /></span>
-                                <FormattedMessage id="cons[{analysis}]" defaultMessage={this.state.analysis[analysis].tip} />
+                                <FormattedMessage id="tip[{analysis}]" defaultMessage={this.state.analysis[analysis].tip} />
                             </p>
                             <hr />
                         </div>
@@ -149,27 +168,27 @@ class App extends Component {
         var summaries = [numRed, numBlue, numGreen, numYellow]
         var max = Math.max(...summaries);
         if (summaries[0] === max) {
-            analysis.push(data.types.red);
+            analysis.push(this.state.data.types.red);
         }
 
         if (summaries[1] === max) {
-            analysis.push(data.types.blue);
+            analysis.push(this.state.data.types.blue);
         }
 
         if (summaries[2] === max) {
-            analysis.push(data.types.green);;
+            analysis.push(this.state.data.types.green);;
         }
 
         if (summaries[3] === max) {
-            analysis.push(data.types.yellow);
+            analysis.push(this.state.data.types.yellow);
         }
         // -->
 
         var chartData = [
-            { y: numRed, label: (numRed / data.questions.length * 100).toFixed(2) + "%" },
-            { y: numGreen, label: (numGreen / data.questions.length * 100).toFixed(2) + "%" },
-            { y: numBlue, label: (numBlue / data.questions.length * 100).toFixed(2) + "%" },
-            { y: numYellow, label: (numYellow / data.questions.length * 100).toFixed(2) + "%" }
+            { y: numRed, label: (numRed / this.state.data.questions.length * 100).toFixed(2) + "%" },
+            { y: numGreen, label: (numGreen / this.state.data.questions.length * 100).toFixed(2) + "%" },
+            { y: numBlue, label: (numBlue / this.state.data.questions.length * 100).toFixed(2) + "%" },
+            { y: numYellow, label: (numYellow / this.state.data.questions.length * 100).toFixed(2) + "%" }
         ];
 
         this.setState(() => ({
@@ -195,7 +214,7 @@ class App extends Component {
     }
 
     getQuestions = () => {
-        var newdata = data.questions.map((data, index) => {
+        var newdata = this.state.data.questions.map((data, index) => {
             if (this.state.activeQuestion === index) {
             return (
                 <div key="question-{index+1}">
@@ -241,24 +260,43 @@ class App extends Component {
                         this.handleNavigate(false);
                     }}
                     type="button"
-                    disabled={(this.state.activeQuestion >= data.questions.length - 1) || (this.state.activeQuestion >= this.state.answers.length )}
+                    disabled={(this.state.activeQuestion >= this.state.data.questions.length - 1) || (this.state.activeQuestion >= this.state.answers.length )}
                     className="btn btn-success btn-lg">
                         <FormattedMessage id="btn.next" />
                 </button>
+
+                <br /><br />
+                <button
+                  type="button"
+                  onClick={() => {
+                      this.changeLang('fi');
+                  }}
+                  className="btn btn-lg btn-secondary">Suomeksi
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                      this.changeLang('en');
+                  }}
+                  className="btn btn-lg btn-secondary">In english
+                </button>
+
                 <br />
-                {this.state.answers.length === data.questions.length && (
+                {this.state.answers.length === this.state.data.questions.length && (
                     <FormattedMessage id="btn.submit" >
                         {val =>
-                            <input type="submit" value={val} class="btn btn-primary btn-lg" />
+                            <input type="submit" value={val} className="btn btn-primary btn-lg" />
                         }
                     </FormattedMessage>)
                 }
             </div>
+
         )
     }
 
     render() {
         return (
+            <IntlProvider locale={this.state.lang} key={this.state.lang} messages={messages[this.state.lang]}>
             <div className="App">
                 <div className="container">
                     <div className="row">
@@ -305,6 +343,7 @@ class App extends Component {
                     </TransitionGroup>
                 </div>
             </div>
+            </IntlProvider>
         );
     }
 }
