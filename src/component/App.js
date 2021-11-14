@@ -330,7 +330,7 @@ class App extends Component {
                     <TransitionGroup component={null}>
                     {this.state.showSummary === true && (
                         <CSSTransition classNames="chart" timeout={300}>
-                            <div className="row">
+                            <div className="row summaryWrapper">
                                     <div className="col-lg-6">
                                     {this.summaryText()}
                                 </div>
