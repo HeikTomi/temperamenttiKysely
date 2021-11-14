@@ -3,9 +3,6 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 class PageInfo extends Component {
-  constructor(props) {
-      super(props);
-  }
 
   render() {
     return (
@@ -17,8 +14,7 @@ class PageInfo extends Component {
                     id="homepage.info"
                     values={{
                         newP: <span><br /><br /></span>,
-                    }}
-                  />
+                    }} />
               </p>
                 <div className="row">
                   <div className="col-md-6">
