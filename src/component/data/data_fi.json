@@ -468,7 +468,7 @@
         "pros": "Punainen on energinen, suoraviivainen, reilu ja voimakastahtoinen. Ilmaisutyyli hänellä on jämäkkä, tavoitteellinen, reipas ja äänekäs. Punaisen rooli on itsevarma, veturi, puheenjohtaja ja taistelija. Hän vastaa energiasta.",
         "cons": "hallitsevuus, käskyttävyys, kärsimättömyys. Punaisen on myös vaikea nähdä rajoituksiaan.",
         "tip": "delegointi, rentoutuminen ja Hiljaa hyvä tulee.",
-        "color":  "red"
+        "color":  "#d52a2a"
       },
     "green": {
       "headline": "Vihreä",
@@ -482,7 +482,7 @@
       "pros": "Sininen on suunnitelmallinen, perusteellinen, keskittynyt ja hänellä on laajat näkemykset. Hänen ilmaisutyylinsä on hillittyä, asiallista, harkitsevaa ja tarkkaan määriteltyä. Sinisen rooli on asiantuntija, tarkkailija, tutkija, keräilijä ja faktoista vastaava.",
       "cons": "tosikkomaisuus, perfektionismi, vetäytyvyys ja helposti ahdistuminen.",
       "tip": "huumori, vaihtoehdot, teoria ja käytäntö kaksi eri asiaa.",
-      "color": "blue"
+      "color": "#3453A3"
     },
     "yellow": {
       "headline": "Keltainen",

@@ -9,6 +9,9 @@ import messages from '../messages';
 
 import { FormattedMessage } from 'react-intl';
 
+import Header  from './Header';
+import PageInfo from './Pageinfo';
+
 import './styles/App.scss';
 
 import data_fi from './data/data_fi.json';
@@ -26,13 +29,18 @@ class App extends Component {
             chartData: [{ y: 5 }, { y: 5 }, { y: 5 }, { y: 5 }],
             showSummary: false,
             lang: this.props.lang,
-            data : data_fi
+            hideInfo: false
         };
 
+        this.state.data = (this.state.lang === 'en') ? data_en : data_fi
+
+        this.changeLang = this.changeLang.bind(this);
+        this.startSurvey = this.startSurvey.bind(this);
         this.onRadioChange = this.onRadioChange.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
     }
 
+    // Language selector
     changeLang = (language) => {
       this.setState({ lang : language });
 
@@ -41,9 +49,9 @@ class App extends Component {
 
       if(language === 'en')
           this.setState({ data :  data_en });
-
     }
 
+    // Answer selection
     onRadioChange = (e) => {
         if (e.target.dataset.order) {
             var i = parseInt(e.target.dataset.order);
@@ -58,16 +66,30 @@ class App extends Component {
         }
     }
 
+    // Start survey
+    startSurvey = () => {
+      this.resetSurvey();
+      this.setState({
+          hideInfo: true
+      })
+
+      console.log("hide info:", this.state.hideInfo);
+
+    }
+
+    // Reset and start over
     resetSurvey = () => {
         this.setState({
             answers: [],
             analysis: [],
             activeQuestion: 0,
             chartData: [{ y: 5 }, { y: 5 }, { y: 5 }, { y: 5 }],
-            showSummary: false
+            showSummary: false,
+            hideInfo: false
         })
     }
 
+    // Summary text
     summaryText = () => {
             return (
                 <div className="summaryText">
@@ -81,16 +103,16 @@ class App extends Component {
                                     <FormattedMessage id="headline[{analysis}]" defaultMessage={this.state.analysis[analysis].headline} />
                                 </h5>
                                 <p>
-                                <span><FormattedMessage id="character" /></span>
+                                <span><FormattedMessage id="character" /></span><br />
                                 <FormattedMessage id="pros[{analysis}]" defaultMessage={this.state.analysis[analysis].pros} />
                                 </p>
                             </div>
                             <p>
-                                <span><FormattedMessage id="weaknesses"/></span>
+                                <span><FormattedMessage id="weaknesses"/></span><br />
                                 <FormattedMessage id="cons[{analysis}]" defaultMessage={this.state.analysis[analysis].cons} />
                             </p>
                             <p>
-                                <span><FormattedMessage id="tip" /></span>
+                                <span><FormattedMessage id="tip" /></span><br />
                                 <FormattedMessage id="tip[{analysis}]" defaultMessage={this.state.analysis[analysis].tip} />
                             </p>
                             <hr />
@@ -108,13 +130,17 @@ class App extends Component {
             )
     }
 
+    // Piechart of the summary
     summaryChart = () => {
         return (
             <svg viewBox="0 0 400 400">
                 <VictoryPie
                 standalone={false}
                 width={400} height={400}
-                colorScale={["red", "green", "blue", "yellow"]}
+                colorScale={[this.state.data.types.red.color,
+                  this.state.data.types.green.color,
+                  this.state.data.types.blue.color,
+                  this.state.data.types.yellow.color]}
                 innerRadius={68} labelRadius={150}
                 animate={{ duration: 2000, onLoad: { duration: 1000 } }}
                 data={this.state.chartData}
@@ -163,7 +189,7 @@ class App extends Component {
             return false;
         });
 
-        // TODO: Better logic for checking all max value types ?!
+        // TODO: Better logic for checking all max value types ?
         var analysis = [];
         var summaries = [numRed, numBlue, numGreen, numYellow]
         var max = Math.max(...summaries);
@@ -264,23 +290,6 @@ class App extends Component {
                     className="btn btn-success btn-lg">
                         <FormattedMessage id="btn.next" />
                 </button>
-
-                <br /><br />
-                <button
-                  type="button"
-                  onClick={() => {
-                      this.changeLang('fi');
-                  }}
-                  className="btn btn-lg btn-secondary">Suomeksi
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                      this.changeLang('en');
-                  }}
-                  className="btn btn-lg btn-secondary">In english
-                </button>
-
                 <br />
                 {this.state.answers.length === this.state.data.questions.length && (
                     <FormattedMessage id="btn.submit" >
@@ -299,24 +308,15 @@ class App extends Component {
             <IntlProvider locale={this.state.lang} key={this.state.lang} messages={messages[this.state.lang]}>
             <div className="App">
                 <div className="container">
-                    <div className="row">
-                        <div className="col">
-                            <h1><FormattedMessage id="homepage.headline" /></h1>
-                        </div>
-                    </div>
+                    <Header />
                     {this.state.showSummary === false && (
                         <div>
-                            <div className="row">
-                                <div className="col">
-                                    <p className="infoText">
-                                        <FormattedMessage
-                                            id="homepage.info"
-                                            values={{
-                                                newP: <span><br /><br /></span>,
-                                            }} />
-                                    </p>
-                                </div>
-                            </div>
+                          {this.state.hideInfo === false && (
+                            <PageInfo
+                              changeLang={this.changeLang}
+                              startSurvey={this.startSurvey}
+                            />)}
+                            {this.state.hideInfo === true && (
                             <div className="row">
                                 <div className="col">
                                     <form onSubmit={this.onSubmit} className="surveyForm">
@@ -324,7 +324,7 @@ class App extends Component {
                                         {this.surveyNavigation()}
                                     </form>
                                 </div>
-                            </div>
+                            </div>)}
                         </div>
                     )}
                     <TransitionGroup component={null}>

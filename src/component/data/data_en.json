@@ -468,7 +468,7 @@
         "pros": "Red is energetic, straightforward, fair and strong-willed. His style of expression is firm, purposeful, brisk and loud. The role of the red is confident, locomotive, chairman and fighter. He is responsible for energy.",
         "cons": "dominance, commandment, impatience. Red also has a hard time seeing its limitations.",
         "tip": "delegation, relaxation and more haste, less speed.",
-        "color":  "red"
+        "color":  "#d52a2a"
       },
     "green": {
       "headline": "Green",
@@ -482,7 +482,7 @@
       "pros": "Blue is planned, thorough, focused, and has broad insights. His style of expression is restrained, matter-of-fact, thoughtful, and well-defined. The role of Blue is an expert, an observer, a researcher, a collector, and a person in charge of the facts.",
       "cons": "reality, perfectionism, withdrawal, and ease of anxiety.",
       "tip": "humor, options, theory and practice are two different things.",
-      "color": "blue"
+      "color": "#3453A3"
     },
     "yellow": {
       "headline": "Yellow",

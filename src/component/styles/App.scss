@@ -17,7 +17,7 @@ body {
     font: 100% $font-stack;
 
     h1 {
-        font-size: 1.5em;
+        font-size: 2.5rem;
         font-weight: bold;
         margin-bottom: 20px;
         padding-bottom: 10px;
@@ -36,6 +36,7 @@ body {
         width: 100%;
         color: white;
         padding: 10px 0 10px 10px;
+        font-weight: bold;
     }
 
     p {
@@ -61,12 +62,16 @@ body {
     }
 
     .infoText {
+        p {
+            font: 1.5rem $font-stack;
+        }
+
         background-color: $bg-color;
         padding: 20px 20px;
+        margin-bottom: 20px;
     }
 
     .surveyForm {
-
         label {
             transition: background-color 0.5s ease-in-out;
             width: 100%;

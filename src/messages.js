@@ -7,10 +7,12 @@ const lang = {
     'character': 'Luonne:',
     'weaknesses': 'Heikkoudet:',
     'tip': 'Treenattavaa:',
+    'btn.start': 'Aloita kysely',
     'btn.reset': 'Aloita alusta',
     'btn.next': 'Seuraava',
     'btn.previous': 'Edellinen',
-    'btn.submit': 'Näytä tulokseni'
+    'btn.submit': 'Näytä tulokseni',
+    'btn.languageSelector' : "Vaihda kieli"
   },
 
   en : {
@@ -20,10 +22,12 @@ const lang = {
     'character': 'Peronality:',
     'weaknesses': 'Weaknesses:',
     'tip': 'To train:',
+    'btn.start': 'Start inquery',
     'btn.reset': 'Start over',
     'btn.next': 'Next',
     'btn.previous': 'Previous',
-    'btn.submit': 'Show results'
+    'btn.submit': 'Show results',
+    'btn.languageSelector' : 'Change language'
   }
 }
 
