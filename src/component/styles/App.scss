@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 
 $primary-color: #E4952B;
+$hover: #D6D6D6;
 $bg-color: #f7f7f7;
 $font-stack: 'Open Sans Condensed', sans-serif;
 $font-paragraph: Arial;
@@ -91,7 +92,7 @@ body {
 
         label:hover, label:active {
             transition: background-color 0.5s ease-in-out;
-            background: $primary-color;
+            background: $hover;
             cursor: pointer;
         }
 
@@ -103,7 +104,7 @@ body {
         }
 
         .radio-selected {
-            background: $primary-color;
+            background: $primary-color !important;
             color: white;
             font-weight: bold;
         }
