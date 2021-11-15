@@ -90,10 +90,12 @@ body {
             }
         }
 
-        label:hover, label:active {
+        @media(hover: hover) {
+            label:hover, label:active {
             transition: background-color 0.5s ease-in-out;
             background: $hover;
             cursor: pointer;
+          }
         }
 
         ul {
