@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/temperamenttiKysely/static/css/main.53bae9b4.chunk.css",
+    "main.css": "/temperamenttiKysely/static/css/main.ee4dfccd.chunk.css",
     "main.js": "/temperamenttiKysely/static/js/main.7df781be.chunk.js",
     "main.js.map": "/temperamenttiKysely/static/js/main.7df781be.chunk.js.map",
     "runtime-main.js": "/temperamenttiKysely/static/js/runtime-main.645e526c.js",
@@ -8,13 +8,13 @@
     "static/js/2.e9808c50.chunk.js": "/temperamenttiKysely/static/js/2.e9808c50.chunk.js",
     "static/js/2.e9808c50.chunk.js.map": "/temperamenttiKysely/static/js/2.e9808c50.chunk.js.map",
     "index.html": "/temperamenttiKysely/index.html",
-    "static/css/main.53bae9b4.chunk.css.map": "/temperamenttiKysely/static/css/main.53bae9b4.chunk.css.map",
+    "static/css/main.ee4dfccd.chunk.css.map": "/temperamenttiKysely/static/css/main.ee4dfccd.chunk.css.map",
     "static/js/2.e9808c50.chunk.js.LICENSE.txt": "/temperamenttiKysely/static/js/2.e9808c50.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.645e526c.js",
     "static/js/2.e9808c50.chunk.js",
-    "static/css/main.53bae9b4.chunk.css",
+    "static/css/main.ee4dfccd.chunk.css",
     "static/js/main.7df781be.chunk.js"
   ]
 }
