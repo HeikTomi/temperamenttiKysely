@@ -44,11 +44,15 @@ class App extends Component {
     changeLang = (language) => {
       this.setState({ lang : language });
 
-      if(language === 'fi')
-          this.setState({ data : data_fi });
+      if(language === 'fi'){
+        document.title = "Testaa temperamenttisi";
+        this.setState({ data : data_fi });
+      }
+      if(language === 'en'){
+        document.title = "Temperament inquery";
+        this.setState({ data :  data_en });
+      }
 
-      if(language === 'en')
-          this.setState({ data :  data_en });
     }
 
     // Answer selection
@@ -63,6 +67,14 @@ class App extends Component {
                         }
                     }
             }));
+
+            // On answer change go automaticly to next one
+            if( (this.state.activeQuestion <= this.state.data.questions.length - 2)  ){
+              var goToNext = this.state.activeQuestion + 1;
+              this.setState({
+                  activeQuestion: goToNext
+              })
+            }
         }
     }
 
@@ -72,9 +84,6 @@ class App extends Component {
       this.setState({
           hideInfo: true
       })
-
-      console.log("hide info:", this.state.hideInfo);
-
     }
 
     // Reset and start over
@@ -91,45 +100,42 @@ class App extends Component {
 
     // Summary text
     summaryText = () => {
-            return (
-                <div className="summaryText">
-
-                    <h2><FormattedMessage id="summary.headline" /></h2>
-
-                    {Object.keys(this.state.analysis).map(analysis => (
-                        <div className="div-analysis" key="{this.state.analysis[analysis].headline}">
-                            <div>
-                                <h5 style={{ backgroundColor: this.state.analysis[analysis].color }} >
-                                    <FormattedMessage id="headline[{analysis}]" defaultMessage={this.state.analysis[analysis].headline} />
-                                </h5>
-                                <p>
-                                <span><FormattedMessage id="character" /></span><br />
-                                <FormattedMessage id="pros[{analysis}]" defaultMessage={this.state.analysis[analysis].pros} />
-                                </p>
-                            </div>
-                            <p>
-                                <span><FormattedMessage id="weaknesses"/></span><br />
-                                <FormattedMessage id="cons[{analysis}]" defaultMessage={this.state.analysis[analysis].cons} />
-                            </p>
-                            <p>
-                                <span><FormattedMessage id="tip" /></span><br />
-                                <FormattedMessage id="tip[{analysis}]" defaultMessage={this.state.analysis[analysis].tip} />
-                            </p>
-                            <hr />
-                        </div>
-                    ))}
-
-                    <button
-                        onClick={() => {
-                            this.resetSurvey();
-                        }}
-                        type="button"
-                        className="btn btn-danger btn-lg"><FormattedMessage id="btn.reset" />
-                    </button>
+      return (
+          <div className="summaryText">
+            <h2><FormattedMessage id="summary.headline" /></h2>
+            {Object.keys(this.state.analysis).map(analysis => (
+                <div className="div-analysis" key={this.state.analysis[analysis].headline} >
+                    <div>
+                        <h5 style={{ backgroundColor: this.state.analysis[analysis].color }} >
+                            {this.state.analysis[analysis].headline}
+                        </h5>
+                        <p>
+                        <span><FormattedMessage id="character" /></span><br />
+                          {this.state.analysis[analysis].pros}
+                        </p>
+                    </div>
+                    <p>
+                        <span><FormattedMessage id="weaknesses"/></span><br />
+                        {this.state.analysis[analysis].cons}
+                    </p>
+                    <p>
+                        <span><FormattedMessage id="tip" /></span><br />
+                        {this.state.analysis[analysis].tip}
+                    </p>
+                    <hr />
                 </div>
-            )
-    }
+            ))}
 
+            <button
+                onClick={() => {
+                    this.resetSurvey();
+                }}
+                type="button"
+                className="btn btn-danger btn-lg"><FormattedMessage id="btn.reset" />
+            </button>
+          </div>
+        )
+    }
     // Piechart of the summary
     summaryChart = () => {
         return (
@@ -170,6 +176,7 @@ class App extends Component {
         var numBlue = 0;
         var numGreen = 0;
         var numYellow = 0;
+        var totalQuestions = this.state.data.questions.length;
 
         // Calculate answers based on colors
         this.state.answers.map((color) => {
@@ -189,7 +196,7 @@ class App extends Component {
             return false;
         });
 
-        // TODO: Better logic for checking all max value types ?
+        // Get highest values color calues and create analysis array for summary
         var analysis = [];
         var summaries = [numRed, numBlue, numGreen, numYellow]
         var max = Math.max(...summaries);
@@ -211,10 +218,10 @@ class App extends Component {
         // -->
 
         var chartData = [
-            { y: numRed, label: (numRed / this.state.data.questions.length * 100).toFixed(2) + "%" },
-            { y: numGreen, label: (numGreen / this.state.data.questions.length * 100).toFixed(2) + "%" },
-            { y: numBlue, label: (numBlue / this.state.data.questions.length * 100).toFixed(2) + "%" },
-            { y: numYellow, label: (numYellow / this.state.data.questions.length * 100).toFixed(2) + "%" }
+            { y: numRed, label: (numRed / totalQuestions  * 100).toFixed(2) + "%" },
+            { y: numGreen, label: (numGreen / totalQuestions * 100).toFixed(2) + "%" },
+            { y: numBlue, label: (numBlue / totalQuestions * 100).toFixed(2) + "%" },
+            { y: numYellow, label: (numYellow / totalQuestions * 100).toFixed(2) + "%" }
         ];
 
         this.setState(() => ({
@@ -244,7 +251,7 @@ class App extends Component {
             if (this.state.activeQuestion === index) {
             return (
                 <div key="question-{index+1}">
-                    <h4>{data.question}:</h4>
+                    <h4>{data.question}</h4>
                     <ul>
                         {Object.keys(data.answers).map((answer, i) => (
                             <li key={i}>
@@ -271,35 +278,38 @@ class App extends Component {
 
     surveyNavigation = () => {
         return (
-            <div>
-                <button
-                    onClick={() => {
-                        this.handleNavigate(true);
-                    }}
-                    type = "button"
-                    disabled = { this.state.activeQuestion < 1 }
-                    className="btn btn-warning btn-lg" >
-                        <FormattedMessage id="btn.previous" />
-                </button>
-                <button
-                    onClick={() => {
-                        this.handleNavigate(false);
-                    }}
-                    type="button"
-                    disabled={(this.state.activeQuestion >= this.state.data.questions.length - 1) || (this.state.activeQuestion >= this.state.answers.length )}
-                    className="btn btn-success btn-lg">
-                        <FormattedMessage id="btn.next" />
-                </button>
-                <br />
-                {this.state.answers.length === this.state.data.questions.length && (
-                    <FormattedMessage id="btn.submit" >
-                        {val =>
-                            <input type="submit" value={val} className="btn btn-primary btn-lg" />
-                        }
-                    </FormattedMessage>)
-                }
-            </div>
+        <div>
+            <button
+              onClick={() => {
+                  this.handleNavigate(true);
+              }}
+              type = "button"
+              disabled = { this.state.activeQuestion < 1 }
+              className="btn btn-warning btn-lg" >
+                  <FormattedMessage id="btn.previous" />
+            </button>
 
+            <span className="questionNumbers" >
+              {this.state.activeQuestion +1 }/{this.state.data.questions.length}
+            </span>
+
+            <button
+                onClick={() => {
+                    this.handleNavigate(false);
+                }}
+                type="button"
+                disabled={(this.state.activeQuestion >= this.state.data.questions.length - 1) || (this.state.activeQuestion >= this.state.answers.length )}
+                className="btn btn-success btn-lg">
+                    <FormattedMessage id="btn.next" />
+            </button>
+            <br />
+            {this.state.answers.length === this.state.data.questions.length && (
+              <FormattedMessage id="btn.submit" >
+                  {val =>
+                      <input type="submit" value={val} className="btn btn-primary btn-lg" />
+                  }
+              </FormattedMessage>)}
+            </div>
         )
     }
 

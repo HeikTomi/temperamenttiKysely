@@ -123,6 +123,16 @@ body {
         input[type="submit"] {
             margin: 15px;
         }
+
+        .questionNumbers {
+          font-weight: bold;
+          display: inline-block;
+          margin-right: 15px;
+          background-color: $primary-color;
+          color: white;
+          padding: 12px;
+          border-radius: 30px;
+        }
     }
 }
 
