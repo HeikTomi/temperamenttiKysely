@@ -1,6 +1,6 @@
 {
-  "name": "tenperamenttikysely",
-  "version": "0.1.0",
+  "name": "temperamenttikysely",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://HeikTomi.github.io/temperamenttiKysely",
   "dependencies": {
